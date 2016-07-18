@@ -5,7 +5,7 @@ abstract class sellnowPaymentMethods
     const BITCOIN = 1;
     const ETHEREUM = 2;
     const PERFECT_MONEY = 3;
-    const STRIPE = 3;
+    const STRIPE = 4;
 }
 
 if(!isset($_POST) || sizeof($_POST) === 0 || !isset($_SERVER['HTTP_IPN_HASH'])) {    
