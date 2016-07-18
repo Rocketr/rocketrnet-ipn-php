@@ -6,9 +6,11 @@ sellnow is a stress free payment gateway that allows you to sell digital files a
 You can learn more [here](http://sellnow.io)
 
 # IPN Notification Payload
-After you enable IPN Notifications for your products and have successfully setup IPN Notifications on your website, you will receive a post request every time a buyer has purchased a product and paid for the product in its entirety. We will send the following information in the post request as a JSON Object:
- - ipn_secret
-   * This is sha512 hash of the IPN secret that you setup in your account settings page. Please note that we will NEVER send your IPN secret in open. It will always be hashed.
+After you enable IPN Notifications for your products and have successfully setup IPN Notifications on your website, you will receive a post request every time a buyer has purchased a product and paid for the product in its entirety. 
+
+To verify the integrity of the payload, we will send an HMAC signature over a HTTP header called "IPN_HASH". The HMAC signature will be a signed json encoded POST object with your IPN secret. You can see how to verify the signature in the `example_sellnow_ipn.php` file in this repository.
+
+We will send the following information in the post request as a JSON Object:
  - order_id
    * This is a unique string of 12 characters that identifies each order.
  - product_title
@@ -35,7 +37,7 @@ After you enable IPN Notifications for your products and have successfully setup
 
 
 # How to Setup IPN Notifications on Your Website
-Setting  up IPN notifications is extremely easy. Take a look at the `example_sellnow_ipn.php` class in this repository and edit it to suit your needs.
+Setting  up IPN notifications is extremely easy. Take a look at the `example_sellnow_ipn.php` file in this repository and edit it to suit your needs.
 
 # How to Enable IPN Notifications for Your Products
 
