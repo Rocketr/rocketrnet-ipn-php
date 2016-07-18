@@ -36,4 +36,7 @@ $purchased_at = $_POST['purchased_at'];
  *      sendBuyerEmail('Thanks for paying with Paypal');
  *  }
  */
+ 
+ 
+die('ok'); /*You can also respond with something else. sellnow will store the repsonse as well as http response code*/
 ?>
