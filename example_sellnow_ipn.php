@@ -32,11 +32,9 @@ $purchased_at = $_POST['purchased_at'];
 /**
  * You can process the IPN below.
  * For example:
- *  if($payment_method === sellnowPaymentMethods::Paypal) {
+ *  if($payment_method === sellnowPaymentMethods::PAYPAL) {
  *      sendBuyerEmail('Thanks for paying with Paypal');
  *  }
  */
  
- 
-die('ok'); /*You can also respond with something else. sellnow will store the repsonse as well as http response code*/
 ?>
