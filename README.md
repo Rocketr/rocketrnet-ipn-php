@@ -46,3 +46,6 @@ Setting  up IPN notifications is extremely easy. Take a look at the `example_sel
 2. Afterwards, you must add a product and ensure you add the the url you wish to receive IPN notifications as show here
 ![alt text](http://i.imgur.com/xEQrmNf.png "Screenshot")
 3. That's it. It's that simple. Now, whenever someone purchases your product, you will receive a post request (as show above) containing order information.
+ 
+# Firewall Considerations
+In order to ensure that you consistently received Instant Payment Notifications from sellnow, please make sure that you have whitelisted `104.27.160.104` in yoru firewall. 
