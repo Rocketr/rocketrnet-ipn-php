@@ -28,6 +28,7 @@ $payment_method = intval($_POST['payment_method']);
 $invoice_amount_usd = floatval($_POST['invoice_amount_usd']);
 $quantity = intval($_POST['quantity']);
 $purchased_at = $_POST['purchased_at'];
+$txn_id = $_POST['txn_id']; //note this can represent different things, paypal's transaction id, btc/eth blockchain txid, perfect momey id etc
 
 /**
  * You can process the IPN below.
