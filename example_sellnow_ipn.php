@@ -21,7 +21,7 @@ if ($hmac != $_SERVER['HTTP_IPN_HASH']) {
 
 $order_id = $_POST['order_id'];
 $product_title = $_POST['product_title'];
-$product_id = intval($_POST['product_id']);
+$product_id = $_POST['product_id'];
 $buyer_email = $_POST['buyer_email'];
 $buyer_ip = $_POST['buyer_ip'];
 $payment_method = intval($_POST['payment_method']);
