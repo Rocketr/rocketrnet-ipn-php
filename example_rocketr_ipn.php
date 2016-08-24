@@ -1,5 +1,5 @@
 <?php
-abstract class sellnowPaymentMethods
+abstract class rocketrPaymentMethods
 {
     const PAYPAL = 0;
     const BITCOIN = 1;
@@ -33,7 +33,7 @@ $txn_id = $_POST['txn_id']; //note this can represent different things, paypal's
 /**
  * You can process the IPN below.
  * For example:
- *  if($payment_method === sellnowPaymentMethods::PAYPAL) {
+ *  if($payment_method === rocketrPaymentMethods::PAYPAL) {
  *      sendBuyerEmail('Thanks for paying with Paypal');
  *  }
  */
