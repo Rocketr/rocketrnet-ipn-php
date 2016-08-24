@@ -1,14 +1,14 @@
-# sellnow IPN  PHP
-This is an example class of how you can receive and validate notifications from sellnow.
+# rocketr IPN  PHP
+This is an example class of how you can receive and validate notifications from rocketr.
 
-sellnow is a stress free payment gateway that allows you to sell digital files and programs with ease. You can accept PayPal, Bitcoin, and more through our secure checkout process--all from one dashboard.
+rocketr is a stress free payment gateway that allows you to sell digital files and programs with ease. You can accept PayPal, Bitcoin, and more through our secure checkout process--all from one dashboard.
 
-You can learn more [here](http://sellnow.io)
+You can learn more [here](http://rocketr.net)
 
 # IPN Notification Payload
 After you enable IPN Notifications for your products and have successfully setup IPN Notifications on your website, you will receive a post request every time a buyer has purchased a product and paid for the product in its entirety. 
 
-To verify the integrity of the payload, we will send an HMAC signature over a HTTP header called "IPN_HASH". The HMAC signature will be a signed json encoded POST object with your IPN secret. You can see how to verify the signature in the `example_sellnow_ipn.php` file in this repository.
+To verify the integrity of the payload, we will send an HMAC signature over a HTTP header called "IPN_HASH". The HMAC signature will be a signed json encoded POST object with your IPN secret. You can see how to verify the signature in the `example_rocketr_ipn.php` file in this repository.
 
 We will send the following information in the post request as a JSON Object:
  - order_id
@@ -39,15 +39,15 @@ We will send the following information in the post request as a JSON Object:
 
 
 # How to Setup IPN Notifications on Your Website
-Setting  up IPN notifications is extremely easy. Take a look at the `example_sellnow_ipn.php` file in this repository and edit it to suit your needs.
+Setting  up IPN notifications is extremely easy. Take a look at the `example_rocketr_ipn.php` file in this repository and edit it to suit your needs.
 
 # How to Enable IPN Notifications for Your Products
 
-1. In order to receive instant payment notifications, you must first add an IPN secret by visiting the account settings page which can be found [here](https://sellnow.io/seller/settings/account). 
+1. In order to receive instant payment notifications, you must first add an IPN secret by visiting the account settings page which can be found [here](https://rocketr.net/seller/settings/account). 
 ![alt text](http://i.imgur.com/4Bh9SWD.png "Screenshot")
 2. Afterwards, you must add a product and ensure you add the the url you wish to receive IPN notifications as show here
 ![alt text](http://i.imgur.com/xEQrmNf.png "Screenshot")
 3. That's it. It's that simple. Now, whenever someone purchases your product, you will receive a post request (as show above) containing order information.
  
 # Firewall Considerations
-In order to ensure that you consistently received Instant Payment Notifications from sellnow, please make sure that you have whitelisted `104.27.160.104` in yoru firewall. 
+In order to ensure that you consistently received Instant Payment Notifications from rocketr, please make sure that you have whitelisted `104.27.160.104` in yoru firewall. 
