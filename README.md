@@ -29,25 +29,25 @@ We will send the following information in the post request as a JSON Object:
       * 3 = Perfect Money
       * 4 = Stripe 
  - invoice_amount_usd
-   * This is a decimal value of the amoun the buyer was invoiced (and the amount the buyer paid in USD)
+   * This is a decimal value of the amount the buyer was invoiced (and the amount the buyer paid in USD)
  - quantity
    * The number of items the buyer purchased.
  - purchased_at
-   * A MySQL DateTime object signifying the time the invoice was generated (formated as YYYY-MM-DD HH:MM:SS)
+   * A MySQL DateTime object signifying the time the invoice was generated (formatted as Y-m-d H:i:s)
  - txn_id
    * This is a string that represents a transaction id for the payment method used to purchase the product. For example, this can refer to payapl's transaction id, btc/eth's blockchain ID, or perfect money id
 
 
 # How to Setup IPN Notifications on Your Website
-Setting  up IPN notifications is extremely easy. Take a look at the `example_rocketr_ipn.php` file in this repository and edit it to suit your needs.
+Setting up IPN notifications is extremely easy. Take a look at the `example_rocketr_ipn.php` file in this repository and edit it to suit your needs.
 
 # How to Enable IPN Notifications for Your Products
 
 1. In order to receive instant payment notifications, you must first add an IPN secret by visiting the account settings page which can be found [here](https://rocketr.net/seller/settings/account). 
 ![alt text](http://i.imgur.com/4Bh9SWD.png "Screenshot")
-2. Afterwards, you must add a product and ensure you add the the url you wish to receive IPN notifications as show here
+2. Afterward, you must add a product and ensure you add the the url you wish to receive IPN notifications as show here
 ![alt text](http://i.imgur.com/xEQrmNf.png "Screenshot")
-3. That's it. It's that simple. Now, whenever someone purchases your product, you will receive a post request (as show above) containing order information.
+3. That's it. It's that simple. Now, whenever someone purchases your product, you will receive a post request (as shown above) containing order information.
  
 # Firewall Considerations
-In order to ensure that you consistently received Instant Payment Notifications from rocketr, please make sure that you have whitelisted `104.27.160.104` in yoru firewall. 
+In order to ensure that you consistently received Instant Payment Notifications from rocketr, please make sure that you have whitelisted `104.27.160.104` in your firewall. 
