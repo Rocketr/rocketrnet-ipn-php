@@ -36,6 +36,8 @@ We will send the following information in the post request as a JSON Object:
    * A MySQL DateTime object signifying the time the invoice was generated (formatted as Y-m-d H:i:s)
  - txn_id
    * This is a string that represents a transaction id for the payment method used to purchase the product. For example, this can refer to payapl's transaction id, btc/eth's blockchain ID, or perfect money id
+ - status
+   * This is an integer value that refers to the order status. Please see sample code for more information.
 
 
 # How to Setup IPN Notifications on Your Website
