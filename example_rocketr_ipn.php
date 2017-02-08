@@ -30,6 +30,7 @@ abstract class rocketrOrderStatus {
 }
 
 if(!isset($_POST) || sizeof($_POST) === 0 || !isset($_SERVER['HTTP_IPN_HASH'])) {    
+    http_response_code(400);
     die('Received Invalid IPN ');
 }
 
@@ -37,6 +38,7 @@ $IPN_SECRET = ''; /* Please enter your IPN secret here*/
 
 $hmac = hash_hmac("sha512", json_encode($_POST), trim($IPN_SECRET));
 if ($hmac != $_SERVER['HTTP_IPN_HASH']) { 
+    http_response_code(401);
     die('IPN Hash does not match'); 
 }
 
