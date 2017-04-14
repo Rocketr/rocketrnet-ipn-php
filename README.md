@@ -38,6 +38,9 @@ We will send the following information in the post request as a JSON Object:
    * This is a string that represents a transaction id for the payment method used to purchase the product. For example, this can refer to payapl's transaction id, btc/eth's blockchain ID, or perfect money id
  - status
    * This is an integer value that refers to the order status. Please see sample code for more information.
+ - custom_fields
+   * This contains all the custom fields that may have been associated with the order. 
+   * You can use custom fields to, for example, ask the buyer for their account username/id/email associated with an account on your website
 
 
 # How to Setup IPN Notifications on Your Website
