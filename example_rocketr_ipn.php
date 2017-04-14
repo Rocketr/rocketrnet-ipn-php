@@ -53,6 +53,7 @@ $quantity = intval($_POST['quantity']);
 $purchased_at = $_POST['purchased_at'];
 $txn_id = $_POST['txn_id']; //note this can represent different things, paypal's transaction id, btc/eth blockchain txid, perfect momey id etc
 $status = intval($_POST['status']);
+$custom_fields = json_decode($_POST['custom_fields']); //this will be an array with the keys as the name of the custom_field and the value as the user input.
 
 /**
  * You can process the IPN below.
