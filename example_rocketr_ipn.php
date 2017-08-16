@@ -36,6 +36,8 @@ if(!isset($_POST) || sizeof($_POST) === 0 || !isset($_SERVER['HTTP_IPN_HASH'])) 
 
 $IPN_SECRET = ''; /* Please enter your IPN secret here*/
 
+
+$_POST['custom_fields'] = html_entity_decode($_POST['custom_fields']);//hack for custom fields
 $hmac = hash_hmac("sha512", json_encode($_POST), trim($IPN_SECRET));
 if ($hmac != $_SERVER['HTTP_IPN_HASH']) { 
     http_response_code(401);
