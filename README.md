@@ -28,6 +28,8 @@ We will send the following information in the post request as a JSON Object:
       * 2 = Ethereum
       * 3 = Perfect Money
       * 4 = Stripe 
+      * 5 = PayPal (new system)
+      * 6 = Bitcoin Cash
  - invoice_amount_usd
    * This is a decimal value of the amount the buyer was invoiced (and the amount the buyer paid in USD)
  - quantity
