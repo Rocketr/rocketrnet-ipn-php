@@ -7,6 +7,7 @@ abstract class rocketrPaymentMethods
     const PERFECT_MONEY = 3;
     const STRIPE = 4;
     const PAYPAL_NEW = 5;
+    const BITCOIN_CASH = 6;
 }
 
 abstract class rocketrOrderStatus {
