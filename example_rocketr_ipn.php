@@ -8,6 +8,7 @@ abstract class rocketrPaymentMethods
     const STRIPE = 4;
     const PAYPAL_NEW = 5;
     const BITCOIN_CASH = 6;
+    const LITECOIN = 7;
 }
 
 abstract class rocketrOrderStatus {
